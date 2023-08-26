@@ -1,5 +1,5 @@
 * {
-  font-family: monospace;
+  font-family: sans-serif;
   padding: 0px;
   margin: 0px;
   font-size: 16px;
@@ -7,6 +7,71 @@
   background-color: rgb(24,24,24);
   box-sizing: border-box;
 }
+
+html{
+  scroll-behaviour: smooth;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0%;
+    margin: 5px;
+    margin-left: 2%;
+    width: 100%;
+  }
+  to {
+    width: 100%;
+    margin: 5px;
+  }
+}
+
+@keyframes slideimg {
+  from {
+    opacity: 0%;
+    margin: 5px;
+    margin-left: 12%;
+    }
+  to {
+    opacity: 100%;
+    margin: 5px;
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .p {
+       padding-left: 5px !important;
+       padding-right: 5px !important;
+     }
+  .test-p2 {
+       padding-left: 5px !important;
+       padding-right: 5px !important;
+     }
+  .test-p3 {
+       padding-left: 5px !important;
+       padding-right: 5px !important;
+     }
+  .title {
+       padding-left: 5px !important;
+       padding-right: 5px !important;
+     }
+   .imgtest {
+       width: 100% !important;
+       margin-left: 5px !important;
+       margin-right: 5px !important;
+     }
+   .hplink-example {
+       padding-left: 5px !important;
+       padding-right: 5px !important;
+     }
+   .hplink-example-clicked {
+       padding-left: 5px !important;
+       padding-right: 5px !important;
+     }
+   .sample-btn {
+       margin-left: 5px !important;
+     }
+  }
 
 .header {
   background-color: rgba(48,48,48,0.75);
@@ -55,7 +120,7 @@
   color: white;
   background-color: rgba(64,64,64,.5);
   position: fixed;
-  right: 110px;
+  right: 90px;
   top: 7.5px;
   text-decoration: none;
   border-radius: 20px;
@@ -103,20 +168,37 @@
   background-color: rgba(0,0,0,0);
   position: sticky;
   font-weight: bold;
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.header-text:hover {
+  text-shadow: 0 0 10px #ffdeff;
+  color: #de80ef;
 }
 
 .title {
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
   margin: 5px;
   text-align: left;
   font-weight: bold;
   font-size: 36px;
+  animation: slidein 500ms;
+  background: none;
 }
 
 .p {
   margin: 5px;
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10%;
+  padding-left: 10%;
   text-align: justify;
+  animation: slidein 500ms;
+  background: none;
 }
 
 .nosuswm {
@@ -137,80 +219,57 @@
 
 .test-p2 {
   margin: 5px;
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
   text-align: justify;
+  background: none;
+  animation: slidein 500ms;
 }
 
 .imgtest {
   border: 3px solid #cc80ff;
   border-radius: 10px;
-  margin: 10px;
-  max-width: 320px;
+  margin-left: 10%;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 320px;
   box-shadow: 0 0 5px #cc80ff;
   transition: 500ms;
   float: left;
+  animation: slideimg 500ms;
 }
 
 .imgtest:hover {
   box-shadow: 0 0 15px #cc80ff;
 }
 
-.hplink-example {
-  color: #40deff;
-  margin-top: 10px;
-  padding-left: 10px;
-  display: block;
-  transition: 250ms;
-  background-color: rgba(0,0,0,0);
-  text-decoration: none;
-}
-
-.hplink-example:hover {
-  letter-spacing: 0.03em;
-  text-shadow: 0 0 10px #40deff;
-}
-
-.hplink-example:active {
-  color: #cc80ff;
-}
-
-.hplink-example-clicked {
-  color: #0080ff;
-  display: block;
-  padding-left: 10px;
-  background-color: rgba(0,0,0,0);
-  transition: 250ms;
-  text-decoration: none;
-}
-
-.hplink-example-clicked:hover {
-  letter-spacing: 0.03em;
-  text-shadow: 0 0 10px #cc80ff;
-}
-
-.hplink-example-clicked:active {
-  color: #cc80ff;
-}
-
-.hplink-example-clicked:visited {
-  color: #cc80ff;
-}
-
 .test-p3 {
   margin: 5px;
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
   text-align: justify;
+  background: none;
+  animation: slidein 500ms;
 }
 
 .sample-btn {
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
   background-color: #303030;
   border-style: none;
   padding: 5px;
-  padding-left: 10px;
+  padding-left: 15px;
   padding-right: 15px;
   border-radius: 15px;
   transition: 250ms;
+  animation: 500ms;
 }
 
 .sample-btn:hover {
